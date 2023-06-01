@@ -1,5 +1,5 @@
 import logo from '../logo_3.png';
-import fullLogo from '../full_logo.png';
+import fullLogo from '../shb.png';
 import {
   BrowserRouter as Router,
   Switch,
@@ -77,9 +77,9 @@ async function connectWebsite() {
           <ul className='flex items-end justify-between py-3 bg-transparent text-white pr-5'>
           <li className='flex items-end ml-5 pb-2'>
             <Link to="/">
-            <img src={fullLogo} alt="" width={120} height={120} className="inline-block -mt-2"/>
+            <img src={fullLogo} alt="" width={90} height={90} className="inline-block -mt-2"/>
             <div className='inline-block font-bold text-xl ml-2'>
-              NFT Marketplace
+            Second Hand Books Marketplace
             </div>
             </Link>
           </li>
@@ -87,29 +87,29 @@ async function connectWebsite() {
             <ul className='lg:flex justify-between font-bold mr-10 text-lg'>
               {location.pathname === "/" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/">Book List</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/">Marketplace</Link>
+                <Link to="/">Book List</Link>
               </li>              
-              }
+              } 
               {location.pathname === "/sellNFT" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/sellNFT">List My NFT</Link>
+                <Link to="/sellNFT">Sell My Book</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/sellNFT">List My NFT</Link>
+                <Link to="/sellNFT">Sell My Book</Link>
               </li>              
               }              
               {location.pathname === "/profile" ? 
               <li className='border-b-2 hover:pb-0 p-2'>
-                <Link to="/profile">Profile</Link>
+                <Link to="/profile">My Profile</Link>
               </li>
               :
               <li className='hover:border-b-2 hover:pb-0 p-2'>
-                <Link to="/profile">Profile</Link>
+                <Link to="/profile">My Profile</Link>
               </li>              
               }  
               <li>
@@ -119,7 +119,7 @@ async function connectWebsite() {
           </li>
           </ul>
         </nav>
-        <div className='text-white text-bold text-right mr-10 text-sm'>
+        <div className='text-black text-bold text-right mr-10 text-sm'>
           {currAddress !== "0x" ? "Connected to":"Not Connected. Please login to view NFTs"} {currAddress !== "0x" ? (currAddress.substring(0,15)+'...'):""}
         </div>
       </div>
