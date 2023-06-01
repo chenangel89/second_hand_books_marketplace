@@ -5,3 +5,4 @@ To set up the repository and run the marketplace locally, run the below
 npm install
 npm start
 ```
+Remember to set the .env
