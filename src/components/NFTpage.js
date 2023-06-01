@@ -54,27 +54,6 @@ async function getNFTData(tokenId) {
     updateCurrAddress(addr);
 }
 
-// async function handleBurnNFT(tokenId) {
-//     try {
-//         const ethers = require("ethers");
-//         const provider = new ethers.providers.Web3Provider(window.ethereum);
-//         const signer = provider.getSigner();
-
-//         //Pull the deployed contract instance
-//         let contract = new ethers.Contract(MarketplaceJSON.address, MarketplaceJSON.abi, signer);
-//         updateMessage("Burning the NFT... Please Wait (Upto 5 mins)")
-
-//         const transaction = await contract.burnNFT(tokenId);
-//         await transaction.wait();
-
-//         // Handle successful burn
-//         alert("NFT burned successfully");
-//     } catch (error) {
-//         // Handle error
-//         alert("Error burning NFT");
-//     }
-// };
-
 async function buyNFT(tokenId) {
     try {
         const ethers = require("ethers");
