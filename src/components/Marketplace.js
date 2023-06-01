@@ -65,6 +65,12 @@ async function getAllNFTs() {
             image: meta.image,
             name: meta.name,
             description: meta.description,
+            author: meta.author,
+            ebook: meta.ebook,
+            contact_name: meta.contact_name,
+            contact_email: meta.contact_email,
+            contact_phone: meta.contact_phone,
+            trading_site: meta.trading_site
         }
         return item;
     }))
@@ -80,13 +86,13 @@ return (
     <div>
         <Navbar></Navbar>
         <div className="flex flex-col place-items-center mt-20">
-            <div className="md:text-xl font-bold text-white">
-                Top NFTs
+            <div className="md:text-xl font-bold text-black">
+                All books
             </div>
             <div className="flex mt-5 justify-between flex-wrap max-w-screen-xl text-center">
-                {data.map((value, index) => {
-                    return <NFTTile data={value} key={index}></NFTTile>;
-                })}
+            {data.reverse().map((value, index) => {
+                return <NFTTile data={value} key={index}></NFTTile>;
+            })}
             </div>
         </div>            
     </div>
