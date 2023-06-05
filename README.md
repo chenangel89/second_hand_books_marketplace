@@ -6,3 +6,5 @@ npm install
 npm start
 ```
 Remember to set the .env
+
+PPT：Second Hand Books Marketplace.pdf
